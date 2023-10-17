@@ -1,1 +1,1 @@
-this is conditional operations variables
+/* this is conditional operations variables */
