@@ -16,7 +16,7 @@ int main(void)
 	{
 		putchar((n % 10) + '0');
 	}
-	for (letter = 'a'; letter <= 'o'; letter++)
+	for (letter = 'a'; letter <= 'f'; letter++)
 	{
 		putchar(letter);
 	}
