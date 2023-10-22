@@ -6,23 +6,20 @@
  * Description: Print all possible combinations of single digit numbers
  * Return: 0
  */
-
 int main(void)
 {
-	int n;
 
-	for (n = 0; n <= 9; n++)
-	{
-		putchar((n % 10) + '0');
-		if (n == 9)
-		{
-			putchar(',');
-			putchar(' ');
-		}
-	}
-	putchar('\n');
-	return (0);
-
-
-
+	int digit = 0;
+		while (digit < 10)
+	       	{
+			putchar(digit + '0'); // Imprime el dígito como un carácter
+        	if (digit < 9)
+	       	{
+            		putchar(','); // Imprime una coma
+            		putchar(' '); // Imprime un espacio
+        	}
+        		digit++; // Incrementa el dígito en 1
+    		}
+		putchar('\n'); // Imprime un salto de línea al final
+		return 0;
 }
