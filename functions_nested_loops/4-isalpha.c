@@ -1,14 +1,14 @@
 #include "main.h"
 /**
  * _isalpha - checks when a character is alphabetic
- * @c: The charactr to be checked
+ * @c: The character to be checked
  *
  * Return: 1 if character is letter, lowercase or uppercase, or otherwise.
  */
 
 int _isalpha(int c)
-{
-	if ((c >= 'a' && c <= 'z' || (c >= 'A' && c <= 'Z'))
+{	/*Tabla Ascii  MAYUSCULAS ||  MINUSCULAS */
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
 	{
 		return (1);
 	}
