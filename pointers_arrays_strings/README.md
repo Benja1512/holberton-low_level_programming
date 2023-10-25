@@ -1,0 +1,1 @@
+/* this is pointers in C programing */
