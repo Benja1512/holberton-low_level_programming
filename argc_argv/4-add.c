@@ -6,7 +6,7 @@
  * @argv: the length of the argument
  * Return: 0
  */
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 
 {
 	int i, n, sum = 0;
