@@ -1,0 +1,1 @@
+/* THIS IS struct typedef functions */
