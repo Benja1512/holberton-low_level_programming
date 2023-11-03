@@ -1,36 +1,27 @@
 #include "dog.h"
-
-
+#include "stdio.h"
 /**
-*_strlen - returns length of
-*a string
-*@str: string to be counted
-*Return: returns length of string
+* print_dog - prints a struct dog
+*@d: dog identification
+*
 */
-int _strlen(char *str)
+
+void print_dog(struct dog *d)
 {
-int len = 0;
-while (str)
-len++;
+	if (d == NULL )
+		return; 
+	
+	if ((*d).name == NULL)
+		printf("nil\n");
+	else
+		printf("Name: %s\n", d->name);
+	if ((*d).age < 0)
+		printf("nil\n");
+	else
+		printf("Age: %f\n", d->age);
+	if ((*d).owner == NULL)
+		printf("nil\n");
+	else
+		printf("Owner: %s\n", d->owner);
 
-return (len);
-}
-
-
-/**
-*_strcopy - copy string pointed by src
-*into dest variable
-*@dest:buffer storing string copy
-*@src: buffer storing string to copy
-*Return:returns copied string
-*/
-char *_strcopy(char *dest, char *src)
-{
-int index = 0;
-
-for (; src[index] ; index++)
-dest[index] = src[index];
-
-dest[index] = '\0';
-return (dest);
 }
