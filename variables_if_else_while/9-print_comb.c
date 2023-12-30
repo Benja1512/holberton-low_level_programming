@@ -1,25 +1,26 @@
-#include <stdlib.h>
 #include <stdio.h>
-#include <time.h>
+
 /**
- * main - print all combinations of single-digit numbers
- * Description: Print all possible combinations of single digit numbers
+ * main - tasks
+ * Description: task
  * Return: 0
  */
+
 int main(void)
 {
+	int i = 0;
 
-	int digit = 0;
-		while (digit < 10)
-	       	{
-			putchar(digit + '0'); // Imprime el dígito como un carácter
-        	if (digit < 9)
-	       	{
-            		putchar(','); // Imprime una coma
-            		putchar(' '); // Imprime un espacio
-        	}
-        		digit++; // Incrementa el dígito en 1
-    		}
-		putchar('\n'); // Imprime un salto de línea al final
-		return 0;
+	while (i < 10)
+	{
+	putchar(i + '0');
+	if (i < 9)
+	{
+		putchar(',');
+		putchar(' ');
+	}
+	i++;
+}
+	putchar('\n');
+
+	return (0);
 }
