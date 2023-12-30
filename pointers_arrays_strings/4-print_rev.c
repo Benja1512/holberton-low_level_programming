@@ -1,21 +1,27 @@
-#include "main.h"
-
 /**
-* print_rev -> printing a string in reverse
-* @s: the string to be printed in rev
-*/
+ * print_rev -Escribe una función que imprima una cadena, al revés.
+ * @s: es la variable con la que va a recorre la cadena
+ * Descrition: imprime una cadena al reves
+ * Return: cadena inversa
+ */
+
+#include "main.h"
+#include <stdio.h>
 
 void print_rev(char *s)
 {
-	int i, n;
+	int length = 0;
+	int i;
 
-	n = 0;
-	while (s[n] != '\0')
-		n++;
-
-	for (i = n - 1; i >= 0; i--)
+	while (s[length] != '\0')
 	{
-		_putchar(s[i]);
+		length++;
 	}
-	_putchar('\n');
+
+	for (i = length - 1; i >= 0; i--)
+	{
+		putchar(s[i]);
+	}
+
+	putchar('\n');
 }
