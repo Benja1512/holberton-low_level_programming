@@ -1,17 +1,21 @@
 #include <stdio.h>
+
 /**
- * print - stdout one argument per line
- * @argc: the amount of argument
- * @argv: the array of argument
+ * main - int
+ * @argc: checked
+ * @argv: checked
+ * Description: Write a program that prints all arguments it receives
  * Return: 0
  */
-int main(int argc, char *argv[])
-{
-	int a;
-	
-	for(a = 0; a < argc; a++)
-		
-		printf("%s\n", argv[a]);
 
-			return (0);
-}
+int main(int argc, char *argv[])
+	{
+
+	int i;
+
+	for (i = 0; i < argc; i++)
+		{
+		printf("%s\n", argv[i]);
+		}
+	return (0);
+	}
