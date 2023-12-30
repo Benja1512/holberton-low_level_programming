@@ -1,33 +1,38 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>
+#include <string.h>
+
 /**
- * main - Prints  last digit randm number generated.
- * Descriptcion: in this case we using conditionals.
- * Return: 0.
-*/
+ * main - one
+ * Description: task1
+ * Return: 0
+ */
 
 int main(void)
 {
 	int n;
+	int lastDigit;
+	char myString[50];
 
 	srand(time(0));
-
 	n = rand() - RAND_MAX / 2;
 
-	if ((n % 10) > 5)
+	lastDigit = n % 10;
+
+	strcpy(myString, "Last digit of");
+
+	if (lastDigit > 5)
 	{
-		printf("Last digit %d is %d and is greater than 5\n", n, n % 10);
+		printf("%s %d is %d and is greater than 5\n", myString, n, lastDigit);
 	}
-	else if ((n % 10) < 6 && (n % 10) != 0)
+	else if (lastDigit == 0)
 	{
-		printf("Last digit of %d is %d and is 0\n", n, 
-			n % 10 );
+		printf("%s %d is %d and is 0\n", myString, n, lastDigit);
 	}
-	else
+	if (lastDigit < 6 && lastDigit != 0)
 	{
-		printf("Last digit of %d is %d and is 0\n",
-			n, n % 10);
+		printf("%s %d is %d and is less than 6 and not 0\n", myString, n, lastDigit);
 	}
 	return (0);
 }
