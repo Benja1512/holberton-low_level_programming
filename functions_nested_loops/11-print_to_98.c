@@ -1,24 +1,39 @@
 #include "main.h"
-#include <stdio.h>
+#include "stdio.h"
+#include <stdlib.h>
+
 /**
- * print_to_98 - print numbers
- * numbers from n to 98
- * @n: integer to start
- * return: null
+ * print_to_98 - int
+ * @n: the character checked
+ * Description: prints all natural numbers from n to 98
+ * Return: 0
  */
 
 void print_to_98(int n)
-{
-	if (n >= 98)
 	{
-		while (n > 98)
-			printf("%d, ", n--);
-		printf("%d\n", n);
-	}
+	int i;
+
+	if (n <= 98)
+		{
+		for (i = n; i <= 98; i++)
+			{
+			printf("%d", i);
+			if (i < 98)
+				{
+				printf(", ");
+				}
+			}
+		}
 	else
 	{
-		while (n < 98)
-			printf("%d\n", n++);
-		printf("%d\n", n);
+		for (i = n; i >= 98; i--)
+			{
+			printf("%d", i);
+			if (i > 98)
+				{
+				printf(", ");
+				}
+			}
 	}
-}
+	printf("\n");
+	}
