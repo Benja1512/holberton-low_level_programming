@@ -1,27 +1,20 @@
+/**
+ * print_dog - definicion de la variables tipo en el struct
+ * @d: es puntero del struc
+ * Description - definir variables en la struc
+ */
+
 #include <stdio.h>
 #include "dog.h"
 
-/**
- * print_dog - prints a 'struct dog'
- * @d: pointer to struct
- * Return: void
- */
-
 void print_dog(struct dog *d)
 {
-	if (d)
+	if (d == NULL)
 	{
-		if (d->name)
-			printf("Name: %s\n", d->name);
-		else
-			printf("Name: (nil)\n");
-		if (d->age == '0')
-			printf("Age: (nil)\n");
-		else
-			printf("Age: %f\n", d->age);
-		if (d->owner)
-			printf("Owner: %s\n", d->owner);
-		else
-			printf("Owner: (nil)\n");
+		return;
 	}
+
+	printf("Name: %s\n", (d->name != NULL) ? d->name : "(nil)");
+	printf("Age: %.6f\n", d->age);
+	printf("Owner: %s\n", (d->owner != NULL) ? d->owner : "(nil)");
 }
