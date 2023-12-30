@@ -1,27 +1,33 @@
-#include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
+#include <stdio.h>
+
 /**
- * create_awway - create an array of size with char c.
- * @size: unsigned int type
- * @c: char type
- * Return: return pointer of array created
+ * create_array - char
+ * @c: the character checked
+ * @size: the character checked
+ * Description: function creates array of chars,initializes with specific char
+ * Return: 0
  */
 
 char *create_array(unsigned int size, char c)
 {
-	char *array;
-	unsigned int index;
+	char *ptr;
+	unsigned int contador;
 
 	if (size == 0)
+	{
 		return (NULL);
-	array = malloc(sizeof(char) * size);
+	}
+	ptr = malloc(size);
 
-	if (array == NULL)
+	if (ptr == NULL)
+	{
 		return (NULL);
+	}
+	for (contador = 0; contador < size; contador++)
+	{
+		ptr[contador] = c;
+	}
+	return (ptr);
 
-	for (index = 0; index < size; index++)
-		array[index] = c;
-
-	return (array);
 }
