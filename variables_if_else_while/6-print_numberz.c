@@ -1,21 +1,20 @@
-#include <stdlib.h>
 #include <stdio.h>
-#include <time.h>
+
 /**
- * main - all singlres numbers of base 10 from 0
- * Description: print all the single numbers of base 10 starting from 0
+ * main - tasks
+ * Description: task
  * Return: 0
  */
 
 int main(void)
 {
-	int a;
+	int y;
 
-	for (a = 0; a <= 10; a++)
+	for (y = 0; y < 10; y++)
 	{
-		putchar((a % 10) + '0');
+		putchar('0' + y);
 	}
-
 	putchar('\n');
-	return (0);
+
+return (0);
 }
