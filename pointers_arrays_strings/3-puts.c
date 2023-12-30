@@ -1,17 +1,20 @@
-#include "main.h"
 /**
- * _puts - prints a string to stdout
- * @str: pointer to the string to print
+ * _puts - Escribe una función que imprima una cadena,
+ *  seguida de una nueva línea
+ *  @str: toma un puntero a una matriz de caracteres como argumento.
+ *  Description: un string lo convierte en texto impreso
+ *  Return: 0
  */
+
+#include "main.h"
+#include <stdio.h>
 
 void _puts(char *str)
 {
-	int i = 0;
-
-	for (i = 0; str[i] != '\0'; i++)
+	while (*str != '\0')
 	{
-		_putchar(str[1]);
-		i++;
+		putchar(*str);
+		str++;
 	}
-	_putchar('\n');
+	putchar('\n');
 }
