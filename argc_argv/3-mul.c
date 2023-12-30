@@ -1,28 +1,27 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
+
 /**
- * print - result of the multiplication, new line
- * @argc: the amount of the argument
- * @argv: the length of the argument
+ * main - int
+ * @argc: checked
+ * @argv: checked
  * Return: 0
  */
-int main (int argc, char *argv[])
-{	
-	int x;  /* declarar variable  tres variables */
-	int c;
-	int multiplicacion;
-	
-	if(argc <= 2) 
+
+int main(int argc, char *argv[])
+{
+	if (argc == 3)
+		{
+		int num1 = atoi(argv[1]);
+		int num2 = atoi(argv[2]);
+		int resultado = num1 * num2;
+
+		printf("%d\n", resultado);
+		}
+	else
 	{
 		printf("Error\n");
 		return (1);
 	}
-	
-	x = atoi(argv[1]); 
-        c = atoi(argv[2]);
-	multiplicacion = x * c;
-
-	printf("multiplicacion: %d\n", multiplicacion);
-		return (0);
-	
+	return (0);
 }
