@@ -1,34 +1,37 @@
 #include "main.h"
 
 /**
- * my_sqrt_recursion - This is my my_sqrt_recursion
- *                     function about the square root
- * @a: The entry is equal to n, of the before function
- * @b: This is the sum
- *
- * Return: This is the result
+ * _sqrt_recursion - Returns the natural square root of a number.
+ * @n: number to get the natural square root
+ * Return: the result of the power
  */
-
-int my_sqrt_recursion(int a, int b)
-{
-	if (a == (b * b))
-		return (b);
-	else if ((b * b) >= a)
-		return (-1);
-	else 
-		return (my_sqrt_recursion(a, b + 1));
-}
-
-
-/** 
- * _sqrt_recursion -this is my first function
- * @n: this is my value
- * Return: this is my result of my function my_sqrt_recursion
- */
-
 int _sqrt_recursion(int n)
 {
-	if (n <= 0)
+	if (n < 0)
+	{
 		return (-1);
-	return (my_sqrt_recursion(n, 0));
+	}
+	else if (n == 0)
+	{
+		return (0);
+	}
+	return (_sqrt_getter(n, 1));
+}
+/**
+ * _sqrt_getter - Get the sqrt root of the `n` number
+ * @n: argument from _sqrt_recursion function
+ * @guess: getter for the square root of the `n` number
+ * Return: Get the the result of square root of `n` number
+ */
+int _sqrt_getter(int n, int guess)
+{
+	if (guess * guess == n)
+	{
+		return (guess);
+	}
+	else if (guess * guess > n)
+	{
+		return (-1);
+	}
+	return (_sqrt_getter(n, guess + 1));
 }
